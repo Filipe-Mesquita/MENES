@@ -9,6 +9,15 @@ public class PlayerController : MonoBehaviour
     public KeyCode leftKey = KeyCode.A;
     public KeyCode rightKey = KeyCode.D;
 
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     void Update()
     {
         // Get input values for movement
@@ -30,8 +39,15 @@ public class PlayerController : MonoBehaviour
         // Update position
         transform.Translate(movement);
 
-        // You can also use Rigidbody2D for more accurate physics-based movement
-        // Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        // rb.MovePosition(rb.position + movement);
+        // Update Animator parameters
+        animator.SetFloat("Horizontal", horizontalInput);
+        animator.SetFloat("Vertical", verticalInput);
+        animator.SetFloat("Speed", movement.magnitude);
+
+        // Flip the sprite based on the movement direction
+        if (movement != Vector3.zero)
+        {
+            spriteRenderer.flipX = (horizontalInput < 0);
+        }
     }
 }
