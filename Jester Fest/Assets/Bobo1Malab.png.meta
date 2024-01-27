@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 925380f80d53acd4e8201c2d20078439
+guid: 9c92e379e2cdac94786ba1795d43f37e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rei_sprite_0
+      name: Bobo1Malab_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 24
-        height: 26
+        x: 2
+        y: 10
+        width: 25
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eab6557e751e1d44cb8b648aba12022f
-      internalID: -313157930
+      spriteID: 295e61a7f9aa6d84db834e8af15a868d
+      internalID: 202332355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rei_sprite_1
+      name: Bobo1Malab_7
       rect:
         serializedVersion: 2
-        x: 24
-        y: 0
-        width: 24
-        height: 26
+        x: 45
+        y: 12
+        width: 25
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f8c17ff7db8e634ba63d744a0cd8e6d
-      internalID: -1697279221
+      spriteID: 86d18cc054f296f428419b5dc5525bf1
+      internalID: 285934451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rei_sprite_2
+      name: Bobo1Malab_10
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
+        x: 82
+        y: 11
         width: 24
-        height: 26
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2595c87aaf6dc5b419b9d11bbc8d0e68
-      internalID: 1048761414
+      spriteID: 366314f61ad7d9a4ab40ce203f618697
+      internalID: -539104073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rei_sprite_3
+      name: Bobo1Malab_12
       rect:
         serializedVersion: 2
-        x: 72
-        y: 0
-        width: 24
-        height: 26
+        x: 119
+        y: 12
+        width: 23
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08f987f2af58185439ae4b85b10074f1
-      internalID: 721395894
+      spriteID: b618cfea852a19141a5cbf39299fe292
+      internalID: -1168505872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bobo1Malab_13
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 11
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d77fdbb88dfc246af661d2f89b4a54
+      internalID: 1236220294
       vertices: []
       indices: 
       edges: []
@@ -217,10 +238,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Rei_sprite_0: -313157930
-      Rei_sprite_1: -1697279221
-      Rei_sprite_2: 1048761414
-      Rei_sprite_3: 721395894
+      Bobo1Malab_0: 321127289
+      Bobo1Malab_1: 831021235
+      Bobo1Malab_10: -539104073
+      Bobo1Malab_11: 1323472423
+      Bobo1Malab_12: -1168505872
+      Bobo1Malab_13: 1236220294
+      Bobo1Malab_14: 458406116
+      Bobo1Malab_2: -1551703439
+      Bobo1Malab_3: 641397657
+      Bobo1Malab_4: 607558765
+      Bobo1Malab_5: 507141205
+      Bobo1Malab_6: 202332355
+      Bobo1Malab_7: 285934451
+      Bobo1Malab_8: -1961833477
+      Bobo1Malab_9: 1542526278
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

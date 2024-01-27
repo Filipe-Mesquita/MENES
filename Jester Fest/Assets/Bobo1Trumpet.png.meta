@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 925380f80d53acd4e8201c2d20078439
+guid: 8b96692472df6fa4c9360bed9e2db118
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rei_sprite_0
+      name: Bobo1Trumpet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 24
-        height: 26
+        width: 48
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,41 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eab6557e751e1d44cb8b648aba12022f
-      internalID: -313157930
+      spriteID: adc6d3706d4da844d80f80821df22c25
+      internalID: 236836724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rei_sprite_1
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 0
-        width: 24
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f8c17ff7db8e634ba63d744a0cd8e6d
-      internalID: -1697279221
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rei_sprite_2
+      name: Bobo1Trumpet_1
       rect:
         serializedVersion: 2
         x: 48
         y: 0
-        width: 24
-        height: 26
+        width: 48
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,29 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2595c87aaf6dc5b419b9d11bbc8d0e68
-      internalID: 1048761414
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rei_sprite_3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 24
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08f987f2af58185439ae4b85b10074f1
-      internalID: 721395894
+      spriteID: b40359bbc901d804a8107dcc7e20f933
+      internalID: 1537328638
       vertices: []
       indices: 
       edges: []
@@ -217,10 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Rei_sprite_0: -313157930
-      Rei_sprite_1: -1697279221
-      Rei_sprite_2: 1048761414
-      Rei_sprite_3: 721395894
+      Bobo1Trumpet_0: 236836724
+      Bobo1Trumpet_1: 1537328638
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

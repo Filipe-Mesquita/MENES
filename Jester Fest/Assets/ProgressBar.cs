@@ -50,7 +50,7 @@ public class PointSliderController : MonoBehaviour
         {
             LoadGameOverScene();
         }
-        else if (currentPoints >= maxPoints)
+        else if (currentPoints >= maxPoints - 3f)
         {
             LoadWinScene();
         }
@@ -114,5 +114,10 @@ public class PointSliderController : MonoBehaviour
 
         // Update UI
         UpdatePointsUI();
+    }
+
+    public float GetCurrentPoints()
+    {
+        return currentPoints;
     }
 }
