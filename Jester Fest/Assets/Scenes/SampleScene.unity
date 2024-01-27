@@ -150,7 +150,7 @@ Transform:
   m_GameObject: {fileID: 41571959}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.21674472, w: 0.9762283}
-  m_LocalPosition: {x: -1.03, y: -0.16, z: 2.0192637}
+  m_LocalPosition: {x: -1.19, y: 0.38, z: 2.0192637}
   m_LocalScale: {x: 1.08, y: 1.08, z: 1.08}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -407,6 +407,7 @@ MonoBehaviour:
   rendererTrumpa: {fileID: 484738128}
   rendererPena: {fileID: 41571961}
   interactObject: {fileID: 0}
+  timeAct: 3
   Controller: {fileID: 817922563}
   BController: {fileID: 1999278360}
 --- !u!61 &159428747
@@ -1386,6 +1387,7 @@ MonoBehaviour:
   rendererTrumpa: {fileID: 484738128}
   rendererPena: {fileID: 41571961}
   interactObject: {fileID: 0}
+  timeAct: 3
   Controller: {fileID: 817922563}
   BController: {fileID: 1999278360}
 --- !u!212 &901667031

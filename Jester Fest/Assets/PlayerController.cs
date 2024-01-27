@@ -45,7 +45,8 @@ public class PlayerController : MonoBehaviour
 
     public GameObject interactObject;
 
-    private float time = 5.0f;
+    public float timeAct = 5.0f;
+    private float time;
 
     public GameController Controller;
     public BalaoController BController;
@@ -56,6 +57,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        time = timeAct;
         
     }
 
@@ -103,7 +105,7 @@ public class PlayerController : MonoBehaviour
 
                 rendererBolas.sprite = Bolas;
                 BolasAgarradas = false;
-                time = 5f;
+                time = timeAct;
                 animation = false;
                 
             }
@@ -149,7 +151,7 @@ public class PlayerController : MonoBehaviour
 
                 rendererTrumpa.sprite = Trumpeta;
                 TrumpAgarr = false;
-                time = 5f;
+                time = timeAct;
                 animation = false;
 
             }
@@ -195,7 +197,7 @@ public class PlayerController : MonoBehaviour
 
                 rendererPena.sprite = Pena;
                 PenaApanha = false;
-                time = 5f;
+                time = timeAct;
                 animation = false;
 
             }
