@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     public KeyCode rightKey = KeyCode.D;
     public KeyCode interactKey = KeyCode.E;
 
+    public float pontoAdd;
+    public float pontoRem;
+
     public PointSliderController pointsSlider;
 
 
@@ -45,7 +48,8 @@ public class PlayerController : MonoBehaviour
     private float time = 5.0f;
 
     public GameController Controller;
-    
+    public BalaoController BController;
+
 
 
     void Start()
@@ -58,10 +62,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
+        
         if (Input.GetKeyDown(interactKey) && insideBolas && !Controller.GetMalabarismo())
         {
             
-            pointsSlider.AddPoints(20f);
+            
             BolasAgarradas = true;
 
 
@@ -86,6 +91,16 @@ public class PlayerController : MonoBehaviour
             {
                 Controller.SetMalabarismo(false);
                 animator.SetBool("Malaba", false);
+
+                if (BController.GetValores().Contains(0))
+                {
+                    pointsSlider.AddPoints(pontoAdd);
+                }
+                else
+                {
+                    pointsSlider.AddPoints(pontoRem);
+                }
+
                 rendererBolas.sprite = Bolas;
                 BolasAgarradas = false;
                 time = 5f;
@@ -98,7 +113,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(interactKey) && insideTrumpa && !Controller.GetToca())
         {
 
-            pointsSlider.AddPoints(20f);
+            
             TrumpAgarr = true;
 
 
@@ -122,6 +137,16 @@ public class PlayerController : MonoBehaviour
             {
                 Controller.SetToca(false);
                 animator.SetBool("Toca", false);
+
+                if (BController.GetValores().Contains(1))
+                {
+                    pointsSlider.AddPoints(pontoAdd);
+                }
+                else
+                {
+                    pointsSlider.AddPoints(pontoRem);
+                }
+
                 rendererTrumpa.sprite = Trumpeta;
                 TrumpAgarr = false;
                 time = 5f;
@@ -133,7 +158,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(interactKey) && insidePena && !Controller.GetPena())
         {
 
-            pointsSlider.AddPoints(20f);
+            
             PenaApanha = true;
 
 
@@ -158,6 +183,16 @@ public class PlayerController : MonoBehaviour
             {
                 Controller.SetPena(false);
                 animator.SetBool("Pena", false);
+
+                if (BController.GetValores().Contains(2))
+                {
+                    pointsSlider.AddPoints(pontoAdd);
+                }
+                else
+                {
+                    pointsSlider.AddPoints(pontoRem);
+                }
+
                 rendererPena.sprite = Pena;
                 PenaApanha = false;
                 time = 5f;

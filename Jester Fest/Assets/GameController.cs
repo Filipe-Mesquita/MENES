@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     public bool Toca = false;
     public bool Pena = false;
 
+
     // Start is called before the first frame update
     void Start()
     {
