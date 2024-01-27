@@ -30,9 +30,14 @@ public class PlayerController : MonoBehaviour
     private bool insideTrumpa = false;
     private bool TrumpAgarr;
 
+    public Sprite Pena;
+    private bool insidePena = false;
+    private bool PenaApanha;
+
     private SpriteRenderer spriteRenderer;
     public SpriteRenderer rendererBolas;
     public SpriteRenderer rendererTrumpa;
+    public SpriteRenderer rendererPena;
     
 
     public GameObject interactObject;
@@ -124,6 +129,42 @@ public class PlayerController : MonoBehaviour
 
             }
         }
+
+        if (Input.GetKeyDown(interactKey) && insidePena && !Controller.GetPena())
+        {
+
+            pointsSlider.AddPoints(20f);
+            PenaApanha = true;
+
+
+
+        }
+
+        if (PenaApanha)
+        {
+            if (time > 0f)
+            {
+
+                time -= Time.deltaTime;
+                Controller.SetPena(true);
+                rendererPena.sprite = vazio;
+                animator.SetBool("Pena", true);
+                animation = true;
+
+            }
+
+
+            else if (time < 0f)
+            {
+                Controller.SetPena(false);
+                animator.SetBool("Pena", false);
+                rendererPena.sprite = Pena;
+                PenaApanha = false;
+                time = 5f;
+                animation = false;
+
+            }
+        }
         // Get input values for movement
         float horizontalInput = 0f;
         float verticalInput = 0f;
@@ -176,6 +217,15 @@ public class PlayerController : MonoBehaviour
 
 
         }
+
+        if (other.tag == "Pena")
+        {
+            insidePena = true;
+            interactObject = other.gameObject;
+
+
+
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -191,6 +241,15 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Trumpete")
         {
             insideTrumpa = false;
+            interactObject = null;
+
+
+
+        }
+
+        if (other.tag == "Pena")
+        {
+            insidePena = false;
             interactObject = null;
 
 

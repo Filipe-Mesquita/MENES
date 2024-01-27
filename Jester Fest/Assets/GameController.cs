@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
     public bool Malabarismo = false;
     public bool Toca = false;
+    public bool Pena = false;
 
     // Start is called before the first frame update
     void Start()
@@ -37,5 +38,15 @@ public class GameController : MonoBehaviour
     public void SetToca(bool n)
     {
         Toca = n;
+    }
+
+    public bool GetPena()
+    {
+        return Pena;
+    }
+
+    public void SetPena(bool n)
+    {
+        Pena = n;
     }
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f9e2012861e05674e9f9491558b94c20
+guid: 964a3c5cbcbb2f545a917b00ae22808e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Bobo2Cocegas_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6832929135c65f47b458ef89ede44e9
+      internalID: -653959222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bobo2Cocegas_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 2
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f63591ea2dab7043b5f8ef58749106c
+      internalID: -450288775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bobo2Cocegas_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604bd13c768c31349b406dc8de40b79a
+      internalID: 884759761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +195,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bobo2Cocegas_0: -653959222
+      Bobo2Cocegas_1: -450288775
+      Bobo2Cocegas_2: 884759761
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
