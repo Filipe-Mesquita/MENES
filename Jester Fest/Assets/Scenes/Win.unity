@@ -1040,7 +1040,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: you survived
+  m_text: HE LAUGHS!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 935b9f2611abfee428952ccb7c20e6b9, type: 2}
   m_sharedMaterial: {fileID: 3295050613058203696, guid: 935b9f2611abfee428952ccb7c20e6b9, type: 2}

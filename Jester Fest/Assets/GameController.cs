@@ -7,6 +7,10 @@ public class GameController : MonoBehaviour
     public bool Malabarismo = false;
     public bool Toca = false;
     public bool Pena = false;
+    public bool Harp = false;
+    public bool Hula = false;
+    public bool Mask = false;
+    //public bool Bulha = false;
 
 
     // Start is called before the first frame update
@@ -51,4 +55,44 @@ public class GameController : MonoBehaviour
     {
         Pena = n;
     }
+
+    public bool GetHarp()
+    {
+        return Harp;
+    }
+
+    public void SetHarp(bool n)
+    {
+        Harp = n;
+    }
+
+    public bool GetHula()
+    {
+        return Hula;
+    }
+
+    public void SetHula(bool n)
+    {
+        Hula = n;
+    }
+
+    public bool GetMask()
+    {
+        return Mask;
+    }
+
+    public void SetMask(bool n)
+    {
+        Mask = n;
+    }
+
+    /**public bool GetBulha()
+    {
+        return Bulha;
+    }
+
+    public void SetBulha(bool n)
+    {
+        Bulha = n;
+    }**/
 }

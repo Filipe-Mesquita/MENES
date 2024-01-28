@@ -926,7 +926,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: game over
+  m_text: YOU LOST YA'HEAD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 935b9f2611abfee428952ccb7c20e6b9, type: 2}
   m_sharedMaterial: {fileID: 3295050613058203696, guid: 935b9f2611abfee428952ccb7c20e6b9, type: 2}
@@ -953,8 +953,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 120
-  m_fontSizeBase: 120
+  m_fontSize: 80.41
+  m_fontSizeBase: 80.41
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

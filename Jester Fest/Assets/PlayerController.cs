@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private bool Malaba;
     private bool Trumpa;
+    private bool Harpa;
+    private bool HulaH;
+    private bool Maska;
+    //private bool Bulhaa;
     private bool animation;
 
 
@@ -37,11 +41,33 @@ public class PlayerController : MonoBehaviour
     private bool insidePena = false;
     private bool PenaApanha;
 
+    public Sprite Harp;
+    private bool insideHarp = false;
+    private bool HarpApanha;
+
+    public Sprite Hula;
+    private bool insideHula = false;
+    private bool HulaApanha;
+
+    public Sprite Mask;
+    private bool insideMask = false;
+    private bool MaskApanha;
+
+    //public Sprite Player1;
+    //public Sprite Player2;
+    //private bool insideBulha = false;
+    //private bool BulhaApanha;
+
     private SpriteRenderer spriteRenderer;
     public SpriteRenderer rendererBolas;
     public SpriteRenderer rendererTrumpa;
     public SpriteRenderer rendererPena;
-    
+    public SpriteRenderer rendererHarp;
+    public SpriteRenderer rendererHula;
+    public SpriteRenderer rendererMask;
+    //public SpriteRenderer rendererPlayer1;
+    //public SpriteRenderer rendererPlayer2;
+
 
     public GameObject interactObject;
 
@@ -58,17 +84,17 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         time = timeAct;
-        
+
     }
 
     void Update()
     {
-        
-        
+
+
         if (Input.GetKeyDown(interactKey) && insideBolas && !Controller.GetMalabarismo())
         {
-            
-            
+
+
             BolasAgarradas = true;
 
 
@@ -107,7 +133,7 @@ public class PlayerController : MonoBehaviour
                 BolasAgarradas = false;
                 time = timeAct;
                 animation = false;
-                
+
             }
         }
 
@@ -115,7 +141,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(interactKey) && insideTrumpa && !Controller.GetToca())
         {
 
-            
+
             TrumpAgarr = true;
 
 
@@ -160,7 +186,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(interactKey) && insidePena && !Controller.GetPena())
         {
 
-            
+
             PenaApanha = true;
 
 
@@ -201,100 +227,353 @@ public class PlayerController : MonoBehaviour
                 animation = false;
 
             }
+
         }
+
+        if (Input.GetKeyDown(interactKey) && insideHarp && !Controller.GetHarp())
+        {
+
+
+            HarpApanha = true;
+
+
+
+        }
+
+        if (HarpApanha)
+        {
+            if (time > 0f)
+            {
+
+                time -= Time.deltaTime;
+                Controller.SetHarp(true);
+                rendererHarp.sprite = vazio;
+                animator.SetBool("Harpa", true);
+                animation = true;
+
+            }
+
+
+            else if (time < 0f)
+            {
+                Controller.SetHarp(false);
+                animator.SetBool("Harpa", false);
+
+                if (BController.GetValores().Contains(3))
+                {
+                    pointsSlider.AddPoints(pontoAdd);
+                }
+                else
+                {
+                    pointsSlider.AddPoints(pontoRem);
+                }
+
+                rendererHarp.sprite = Harp;
+                HarpApanha = false;
+                time = timeAct;
+                animation = false;
+
+            }
+        }
+
+        if (Input.GetKeyDown(interactKey) && insideHula && !Controller.GetHula())
+        {
+
+
+            HulaApanha = true;
+
+
+
+        }
+
+        if (HulaApanha)
+        {
+            if (time > 0f)
+            {
+
+                time -= Time.deltaTime;
+                Controller.SetHula(true);
+                rendererHula.sprite = vazio;
+                animator.SetBool("HulaH", true);
+                animation = true;
+
+            }
+
+
+            else if (time < 0f)
+            {
+                Controller.SetHula(false);
+                animator.SetBool("HulaH", false);
+
+                if (BController.GetValores().Contains(4))
+                {
+                    pointsSlider.AddPoints(pontoAdd);
+                }
+                else
+                {
+                    pointsSlider.AddPoints(pontoRem);
+                }
+
+                rendererHula.sprite = Hula;
+                HulaApanha = false;
+                time = timeAct;
+                animation = false;
+
+            }
+        }
+
+        if (Input.GetKeyDown(interactKey) && insideMask && !Controller.GetMask())
+        {
+
+
+            MaskApanha = true;
+
+
+
+        }
+
+        if (MaskApanha)
+        {
+            if (time > 0f)
+            {
+
+                time -= Time.deltaTime;
+                Controller.SetMask(true);
+                rendererMask.sprite = vazio;
+                animator.SetBool("Maska", true);
+                animation = true;
+
+            }
+
+
+            else if (time < 0f)
+            {
+                Controller.SetMask(false);
+                animator.SetBool("Maska", false);
+
+                if (BController.GetValores().Contains(5))
+                {
+                    pointsSlider.AddPoints(pontoAdd);
+                }
+                else
+                {
+                    pointsSlider.AddPoints(pontoRem);
+                }
+
+                rendererMask.sprite = Mask;
+                MaskApanha = false;
+                time = timeAct;
+                animation = false;
+
+            }
+        }
+
+        /**if (Input.GetKeyDown(interactKey) && insideBulha && !Controller.GetBulha())
+        {
+
+
+            BulhaApanha = true;
+
+
+
+        }
+
+        if (BulhaApanha)
+        {
+            if (time > 0f)
+            {
+
+                time -= Time.deltaTime;
+                Controller.SetBulha(true);
+                rendererPlayer1.sprite = vazio;
+                rendererPlayer2.sprite = vazio;
+                animator.SetBool("Bulhaa", true);
+                animation = true;
+
+            }
+
+
+            else if (time < 0f)
+            {
+                Controller.SetBulha(false);
+                animator.SetBool("Bulhaa", false);
+
+                if (BController.GetValores().Contains(6))
+                {
+                    pointsSlider.AddPoints(pontoAdd);
+                }
+                else
+                {
+                    pointsSlider.AddPoints(pontoRem);
+                }
+
+                rendererPlayer1.sprite = Player1;
+                rendererPlayer2.sprite = Player2;
+                BulhaApanha = false;
+                time = timeAct;
+                animation = false;
+
+            }
+        }**/
         // Get input values for movement
         float horizontalInput = 0f;
-        float verticalInput = 0f;
-        if (!animation) { 
+            float verticalInput = 0f;
+            if (!animation)
+            {
 
-        if (Input.GetKey(leftKey))
-            horizontalInput -= 1f;
-        if (Input.GetKey(rightKey))
-            horizontalInput += 1f;
-        if (Input.GetKey(downKey))
-            verticalInput -= 1f;
-        if (Input.GetKey(upKey))
-            verticalInput += 1f;
+                if (Input.GetKey(leftKey))
+                    horizontalInput -= 1f;
+                if (Input.GetKey(rightKey))
+                    horizontalInput += 1f;
+                if (Input.GetKey(downKey))
+                    verticalInput -= 1f;
+                if (Input.GetKey(upKey))
+                    verticalInput += 1f;
+            }
+
+            // Calculate movement direction
+            Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f).normalized * moveSpeed * Time.deltaTime;
+
+            // Update position
+            transform.Translate(movement);
+
+            // Update Animator parameters
+            animator.SetFloat("Horizontal", horizontalInput);
+            animator.SetFloat("Vertical", verticalInput);
+            animator.SetFloat("Speed", movement.magnitude);
+
+            // Flip the sprite based on the movement direction
+            if (movement != Vector3.zero)
+            {
+                spriteRenderer.flipX = (horizontalInput < 0);
+            }
         }
 
-        // Calculate movement direction
-        Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f).normalized * moveSpeed * Time.deltaTime;
-
-        // Update position
-        transform.Translate(movement);
-
-        // Update Animator parameters
-        animator.SetFloat("Horizontal", horizontalInput);
-        animator.SetFloat("Vertical", verticalInput);
-        animator.SetFloat("Speed", movement.magnitude);
-
-        // Flip the sprite based on the movement direction
-        if (movement != Vector3.zero)
+        void OnTriggerEnter2D(Collider2D other)
         {
-            spriteRenderer.flipX = (horizontalInput < 0);
-        }
+            if (other.tag == "Bolas")
+            {
+                insideBolas = true;
+                interactObject = other.gameObject;
+
+
+
+            }
+
+            if (other.tag == "Trumpete")
+            {
+                insideTrumpa = true;
+                interactObject = other.gameObject;
+
+
+
+            }
+
+            if (other.tag == "Pena")
+            {
+                insidePena = true;
+                interactObject = other.gameObject;
+
+
+
+            }
+
+            if (other.tag == "Harp")
+            {
+                insideHarp = true;
+                interactObject = other.gameObject;
+
+
+
+            }
+
+            if (other.tag == "Hula")
+            {
+                insideHula = true;
+                interactObject = other.gameObject;
+
+
+
+            }
+
+            if (other.tag == "Mask")
+            {
+                insideMask = true;
+                interactObject = other.gameObject;
+
+
+
+            }
+            /**if (other.tag == "Player")
+            {
+                insideBulha = true;
+                interactObject = other.gameObject;
+            }**/
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Bolas")
+        void OnTriggerExit2D(Collider2D other)
         {
-            insideBolas = true;
-            interactObject = other.gameObject;
+            if (other.tag == "Bolas")
+            {
+                insideBolas = false;
+                interactObject = null;
 
 
 
+            }
+            if (other.tag == "Trumpete")
+            {
+                insideTrumpa = false;
+                interactObject = null;
+
+
+
+            }
+
+            if (other.tag == "Pena")
+            {
+                insidePena = false;
+                interactObject = null;
+
+
+
+            }
+
+            if (other.tag == "Harp")
+            {
+                insideHarp = false;
+                interactObject = null;
+
+
+
+            }
+
+            if (other.tag == "Hula")
+            {
+                insideHula = false;
+                interactObject = null;
+
+
+
+            }
+
+            if (other.tag == "Mask")
+            {
+                insideMask = false;
+                interactObject = null;
+
+
+
+            }
+            /**if(other.tag == "Player")
+            {
+            insideBulha = false;
+            interactObject = null; 
+            }**/
         }
 
-        if (other.tag == "Trumpete")
-        {
-            insideTrumpa = true;
-            interactObject = other.gameObject;
 
 
 
-        }
-
-        if (other.tag == "Pena")
-        {
-            insidePena = true;
-            interactObject = other.gameObject;
-
-
-
-        }
     }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag == "Bolas")
-        {
-            insideBolas = false;
-            interactObject = null;
-
-
-
-        }
-        if (other.tag == "Trumpete")
-        {
-            insideTrumpa = false;
-            interactObject = null;
-
-
-
-        }
-
-        if (other.tag == "Pena")
-        {
-            insidePena = false;
-            interactObject = null;
-
-
-
-        }
-    }
-
-    
-
-
-}
