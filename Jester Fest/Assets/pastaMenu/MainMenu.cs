@@ -14,4 +14,8 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+    public void openLink()
+    {
+        Application.OpenURL("https://fasm04.itch.io/jester-fest");
+    }
 }
