@@ -373,7 +373,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(interactKey) && insideBulha && !Controller.GetBulha())
+        if (Input.GetKeyDown(interactKey) && insideBulha && !Controller.GetBulha() && !Controller.GetMalabarismo() && !Controller.GetToca() && !Controller.GetPena() && !Controller.GetHarp() && !Controller.GetMask() && !Controller.GetMacac() && !Controller.GetHula())
         {
 
 
@@ -388,7 +388,7 @@ public class PlayerController : MonoBehaviour
 
             if (time > 0f)
             {
-
+                print("TAPORRA");
                 time -= Time.deltaTime;
                 Controller.SetBulha(true);
                 rendererPlayer2.enabled = false;
