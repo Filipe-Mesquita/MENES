@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private bool HulaH;
     private bool Maska;
     private bool Bulhaa;
+    private bool Macaca;
     private bool animation;
 
 
@@ -58,6 +59,10 @@ public class PlayerController : MonoBehaviour
     private bool insideBulha = false;
     private bool BulhaApanha;
 
+    public Sprite Macac;
+    private bool insideMacac = false;
+    private bool MacacApanha;
+
     private SpriteRenderer spriteRenderer;
     public SpriteRenderer rendererBolas;
     public SpriteRenderer rendererTrumpa;
@@ -66,6 +71,7 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer rendererHula;
     public SpriteRenderer rendererMask;
     public SpriteRenderer rendererPlayer2;
+    public SpriteRenderer rendererMacac;
 
 
     public GameObject interactObject;
@@ -416,7 +422,53 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        
+        if (Input.GetKeyDown(interactKey) && insideMacac && !Controller.GetMacac())
+        {
+
+
+            MacacApanha = true;
+
+
+
+        }
+
+        if (MacacApanha)
+        {
+            if (time > 0f)
+            {
+
+                time -= Time.deltaTime;
+                Controller.SetMacac(true);
+                rendererMacac.sprite = vazio;
+                animator.SetBool("Macaca", true);
+                animation = true;
+
+            }
+
+
+            else if (time < 0f)
+            {
+                Controller.SetMacac(false);
+                animator.SetBool("Macaca", false);
+
+                if (BController.GetValores().Contains(7))
+                {
+                    pointsSlider.AddPoints(pontoAdd);
+                }
+                else
+                {
+                    pointsSlider.AddPoints(pontoRem);
+                }
+
+                rendererMacac.sprite = Macac;
+                MacacApanha = false;
+                time = timeAct;
+                animation = false;
+
+            }
+        }
+
+
 
         // Get input values for movement
         float horizontalInput = 0f;
@@ -515,9 +567,16 @@ public class PlayerController : MonoBehaviour
 
 
             }
+
             if (other.tag == "Player")
             {
                 insideBulha = true;
+                interactObject = other.gameObject;
+            }
+
+            if (other.tag == "Macac")
+            {
+                insideMacac = true;
                 interactObject = other.gameObject;
             }
     }
@@ -579,6 +638,12 @@ public class PlayerController : MonoBehaviour
             if(other.tag == "Player")
             {
                 insideBulha = false;
+                interactObject = null; 
+            }
+
+            if(other.tag == "Macac")
+            {
+                insideMacac = false;
                 interactObject = null; 
             }
         }

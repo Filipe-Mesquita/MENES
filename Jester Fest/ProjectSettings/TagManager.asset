@@ -10,6 +10,7 @@ TagManager:
   - Harp
   - Hula
   - Mask
+  - Macac
   layers:
   - Default
   - TransparentFX

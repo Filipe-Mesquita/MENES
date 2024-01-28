@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public bool Hula = false;
     public bool Mask = false;
     public bool Bulha = false;
+    public bool Macac = false;
 
 
     // Start is called before the first frame update
@@ -106,5 +107,15 @@ public class GameController : MonoBehaviour
     public void StopBulhaAnim()
     {
         animatorP1.SetBool("Bulhaa", false);
+    }
+
+    public bool GetMacac()
+    {
+        return Macac;
+    }
+
+    public void SetMacac(bool n)
+    {
+        Macac = n;
     }
 }
