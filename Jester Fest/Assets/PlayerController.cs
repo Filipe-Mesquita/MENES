@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class PlayerController : MonoBehaviour
     private bool Harpa;
     private bool HulaH;
     private bool Maska;
-    //private bool Bulhaa;
+    private bool Bulhaa;
     private bool animation;
 
 
@@ -53,10 +54,9 @@ public class PlayerController : MonoBehaviour
     private bool insideMask = false;
     private bool MaskApanha;
 
-    //public Sprite Player1;
-    //public Sprite Player2;
-    //private bool insideBulha = false;
-    //private bool BulhaApanha;
+    
+    private bool insideBulha = false;
+    private bool BulhaApanha;
 
     private SpriteRenderer spriteRenderer;
     public SpriteRenderer rendererBolas;
@@ -65,8 +65,7 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer rendererHarp;
     public SpriteRenderer rendererHula;
     public SpriteRenderer rendererMask;
-    //public SpriteRenderer rendererPlayer1;
-    //public SpriteRenderer rendererPlayer2;
+    public SpriteRenderer rendererPlayer2;
 
 
     public GameObject interactObject;
@@ -368,57 +367,61 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        /**if (Input.GetKeyDown(interactKey) && insideBulha && !Controller.GetBulha())
+        if (Input.GetKeyDown(interactKey) && insideBulha && !Controller.GetBulha())
         {
 
 
             BulhaApanha = true;
 
-
+            StartCoroutine("delay");
 
         }
 
         if (BulhaApanha)
         {
+
             if (time > 0f)
             {
 
                 time -= Time.deltaTime;
                 Controller.SetBulha(true);
-                rendererPlayer1.sprite = vazio;
-                rendererPlayer2.sprite = vazio;
-                animator.SetBool("Bulhaa", true);
+                rendererPlayer2.enabled = false;
+                Controller.PlayBulhaAnim();
                 animation = true;
+                
 
             }
 
 
             else if (time < 0f)
             {
-                Controller.SetBulha(false);
-                animator.SetBool("Bulhaa", false);
+                
+                Controller.StopBulhaAnim();
+                
 
                 if (BController.GetValores().Contains(6))
                 {
-                    pointsSlider.AddPoints(pontoAdd);
+                    pointsSlider.AddPoints(pontoAdd * 2f);
                 }
                 else
                 {
                     pointsSlider.AddPoints(pontoRem);
                 }
 
-                rendererPlayer1.sprite = Player1;
-                rendererPlayer2.sprite = Player2;
+                
                 BulhaApanha = false;
                 time = timeAct;
                 animation = false;
 
             }
-        }**/
+        }
+
+        
+
         // Get input values for movement
         float horizontalInput = 0f;
             float verticalInput = 0f;
-            if (!animation)
+            if (!animation && Controller.GetBulha() == false)
             {
 
                 if (Input.GetKey(leftKey))
@@ -448,6 +451,14 @@ public class PlayerController : MonoBehaviour
                 spriteRenderer.flipX = (horizontalInput < 0);
             }
         }
+
+        IEnumerator delay()
+    {
+        yield return new WaitForSeconds(timeAct + .8f);
+        Debug.Log("OLA");
+        Controller.SetBulha(false);
+        rendererPlayer2.enabled = true;
+    }
 
         void OnTriggerEnter2D(Collider2D other)
         {
@@ -504,11 +515,11 @@ public class PlayerController : MonoBehaviour
 
 
             }
-            /**if (other.tag == "Player")
+            if (other.tag == "Player")
             {
                 insideBulha = true;
                 interactObject = other.gameObject;
-            }**/
+            }
     }
 
         void OnTriggerExit2D(Collider2D other)
@@ -565,15 +576,13 @@ public class PlayerController : MonoBehaviour
 
 
             }
-            /**if(other.tag == "Player")
+            if(other.tag == "Player")
             {
-            insideBulha = false;
-            interactObject = null; 
-            }**/
+                insideBulha = false;
+                interactObject = null; 
+            }
         }
 
-
-
-
+    
     }
 

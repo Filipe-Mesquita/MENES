@@ -387,6 +387,7 @@ GameObject:
   - component: {fileID: 159428745}
   - component: {fileID: 159428744}
   - component: {fileID: 159428747}
+  - component: {fileID: 159428748}
   m_Layer: 6
   m_Name: PLAYER1
   m_TagString: Player
@@ -483,7 +484,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -542,6 +543,7 @@ MonoBehaviour:
   rendererHarp: {fileID: 511300663}
   rendererHula: {fileID: 469078079}
   rendererMask: {fileID: 1801598959}
+  rendererPlayer2: {fileID: 901667031}
   interactObject: {fileID: 0}
   timeAct: 3
   Controller: {fileID: 817922563}
@@ -591,6 +593,41 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.45, y: 0.25}
   m_EdgeRadius: 0
+--- !u!58 &159428748
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159428741}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.375
 --- !u!1 &197757536
 GameObject:
   m_ObjectHideFlags: 0
@@ -2253,12 +2290,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d48d199a89fa20e4694fad8b4852bbe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorP1: {fileID: 159428745}
   Malabarismo: 0
   Toca: 0
   Pena: 0
   Harp: 0
   Hula: 0
   Mask: 0
+  Bulha: 0
 --- !u!4 &817922564
 Transform:
   m_ObjectHideFlags: 0
@@ -2288,6 +2327,7 @@ GameObject:
   - component: {fileID: 901667029}
   - component: {fileID: 901667028}
   - component: {fileID: 901667027}
+  - component: {fileID: 901667033}
   m_Layer: 6
   m_Name: PLAYER2
   m_TagString: Player
@@ -2317,7 +2357,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -2421,6 +2461,7 @@ MonoBehaviour:
   rendererHarp: {fileID: 511300663}
   rendererHula: {fileID: 469078079}
   rendererMask: {fileID: 1801598959}
+  rendererPlayer2: {fileID: 901667031}
   interactObject: {fileID: 0}
   timeAct: 3
   Controller: {fileID: 817922563}
@@ -2492,6 +2533,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &901667033
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901667026}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.375
 --- !u!1 &906910531
 GameObject:
   m_ObjectHideFlags: 0
@@ -8257,7 +8333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18f781c411be2244a3e69142a385329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valores: 000000000100000002000000030000000400000005000000
+  valores: 00000000010000000200000003000000040000000500000006000000
   sprites:
   - {fileID: 21300000, guid: 4c11534cc57ecfe4d8fe5ca868dc84d5, type: 3}
   - {fileID: 21300000, guid: 74ae1cbe6623744488f24b99a0f1de84, type: 3}
@@ -8265,6 +8341,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b77c502e339a21646b52c770e9867fb1, type: 3}
   - {fileID: 21300000, guid: f413acbcb9f23d64a97c941c5b3236b3, type: 3}
   - {fileID: 21300000, guid: 71651399f46a10242b49bc42fe542abb, type: 3}
+  - {fileID: 21300000, guid: d01465d695fc86a43801a4522f6ef0cd, type: 3}
   valoresR: 
   renderers:
   - {fileID: 1440311902}

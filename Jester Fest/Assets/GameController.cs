@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    public Animator animatorP1;
+
     public bool Malabarismo = false;
     public bool Toca = false;
     public bool Pena = false;
     public bool Harp = false;
     public bool Hula = false;
     public bool Mask = false;
-    //public bool Bulha = false;
+    public bool Bulha = false;
 
 
     // Start is called before the first frame update
@@ -86,7 +88,7 @@ public class GameController : MonoBehaviour
         Mask = n;
     }
 
-    /**public bool GetBulha()
+    public bool GetBulha()
     {
         return Bulha;
     }
@@ -94,5 +96,15 @@ public class GameController : MonoBehaviour
     public void SetBulha(bool n)
     {
         Bulha = n;
-    }**/
+    }
+
+    public void PlayBulhaAnim()
+    {
+        animatorP1.SetBool("Bulhaa", true);
+    }
+
+    public void StopBulhaAnim()
+    {
+        animatorP1.SetBool("Bulhaa", false);
+    }
 }
