@@ -68,13 +68,13 @@ public class PointSliderController : MonoBehaviour
     void LoadGameOverScene()
     {
         // Replace "YourGameOverSceneName" with the actual name of your game over scene
-        SceneManager.LoadScene("YourGameOverSceneName");
+        SceneManager.LoadScene("GameOver");
     }
 
     void LoadWinScene()
     {
         // Replace "YourWinSceneName" with the actual name of your win scene
-        SceneManager.LoadScene("YourWinSceneName");
+        SceneManager.LoadScene("Win");
     }
 
     void UpdateMusic()
