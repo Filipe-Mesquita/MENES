@@ -530,7 +530,7 @@ MonoBehaviour:
   pontoAdd: 8
   pontoRem: -4
   pointsSlider: {fileID: 364178042}
-  Bolas: {fileID: 21300000, guid: 479ef001cd4a17e45a136569412eece5, type: 3}
+  Bolas: {fileID: 21300000, guid: 4c11534cc57ecfe4d8fe5ca868dc84d5, type: 3}
   Trumpeta: {fileID: 21300000, guid: 74ae1cbe6623744488f24b99a0f1de84, type: 3}
   Pena: {fileID: 21300000, guid: f9e2012861e05674e9f9491558b94c20, type: 3}
   Harp: {fileID: 21300000, guid: b77c502e339a21646b52c770e9867fb1, type: 3}
@@ -898,7 +898,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 479ef001cd4a17e45a136569412eece5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c11534cc57ecfe4d8fe5ca868dc84d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2019,7 +2019,7 @@ MonoBehaviour:
   pontoAdd: 8
   pontoRem: -4
   pointsSlider: {fileID: 364178042}
-  Bolas: {fileID: 21300000, guid: 479ef001cd4a17e45a136569412eece5, type: 3}
+  Bolas: {fileID: 21300000, guid: 4c11534cc57ecfe4d8fe5ca868dc84d5, type: 3}
   Trumpeta: {fileID: 21300000, guid: 74ae1cbe6623744488f24b99a0f1de84, type: 3}
   Pena: {fileID: 21300000, guid: f9e2012861e05674e9f9491558b94c20, type: 3}
   Harp: {fileID: 21300000, guid: b77c502e339a21646b52c770e9867fb1, type: 3}
@@ -2242,6 +2242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 915778132}
   - component: {fileID: 915778131}
+  - component: {fileID: 915778133}
   m_Layer: 0
   m_Name: BalaoPensamentoAnim_0
   m_TagString: Untagged
@@ -2316,6 +2317,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1999278361}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &915778133
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915778130}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ffc346d46c5e0964db0c03041425fc43, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &924017029
 GameObject:
   m_ObjectHideFlags: 0
@@ -7713,7 +7735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   valores: 000000000100000002000000030000000400000005000000
   sprites:
-  - {fileID: 21300000, guid: 479ef001cd4a17e45a136569412eece5, type: 3}
+  - {fileID: 21300000, guid: 4c11534cc57ecfe4d8fe5ca868dc84d5, type: 3}
   - {fileID: 21300000, guid: 74ae1cbe6623744488f24b99a0f1de84, type: 3}
   - {fileID: 21300000, guid: f9e2012861e05674e9f9491558b94c20, type: 3}
   - {fileID: 21300000, guid: b77c502e339a21646b52c770e9867fb1, type: 3}
@@ -7724,7 +7746,7 @@ MonoBehaviour:
   - {fileID: 1440311902}
   - {fileID: 341852924}
   - {fileID: 1033816489}
-  timer: 5
+  timer: 1
   time: 5
 --- !u!4 &1999278361
 Transform:
