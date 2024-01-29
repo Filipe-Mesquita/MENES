@@ -2680,8 +2680,8 @@ MonoBehaviour:
   leftKey: 276
   rightKey: 275
   interactKey: 305
-  pontoAdd: 8
-  pontoRem: -4
+  pontoAdd: 0.08
+  pontoRem: -0.04
   pointsSlider: {fileID: 364178042}
   Bolas: {fileID: 21300000, guid: 4c11534cc57ecfe4d8fe5ca868dc84d5, type: 3}
   Trumpeta: {fileID: 21300000, guid: 74ae1cbe6623744488f24b99a0f1de84, type: 3}
@@ -10353,7 +10353,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f413acbcb9f23d64a97c941c5b3236b3, type: 3}
   - {fileID: 21300000, guid: 71651399f46a10242b49bc42fe542abb, type: 3}
   - {fileID: 21300000, guid: d01465d695fc86a43801a4522f6ef0cd, type: 3}
-  - {fileID: -2110872615, guid: d689da9af6398f14ba9a9895ddf5edc3, type: 3}
+  - {fileID: 21300000, guid: e2648464c95afcc4c90c9c86b02c7c5e, type: 3}
   valoresR: 
   renderers:
   - {fileID: 1440311902}
