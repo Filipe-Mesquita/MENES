@@ -117,14 +117,6 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("Malaba", true);
                 animation = true;
 
-            }
-
-
-            else if (time < 0f)
-            {
-                Controller.SetMalabarismo(false);
-                animator.SetBool("Malaba", false);
-
                 if (BController.GetValores().Contains(0))
                 {
                     pointsSlider.AddPoints(pontoAdd);
@@ -133,6 +125,16 @@ public class PlayerController : MonoBehaviour
                 {
                     pointsSlider.AddPoints(pontoRem);
                 }
+
+            }
+
+
+            else if (time < 0f)
+            {
+                Controller.SetMalabarismo(false);
+                animator.SetBool("Malaba", false);
+
+                
 
                 rendererBolas.sprite = Bolas;
                 BolasAgarradas = false;
@@ -163,14 +165,6 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("Toca", true);
                 animation = true;
 
-            }
-
-
-            else if (time < 0f)
-            {
-                Controller.SetToca(false);
-                animator.SetBool("Toca", false);
-
                 if (BController.GetValores().Contains(1))
                 {
                     pointsSlider.AddPoints(pontoAdd);
@@ -179,6 +173,16 @@ public class PlayerController : MonoBehaviour
                 {
                     pointsSlider.AddPoints(pontoRem);
                 }
+
+            }
+
+
+            else if (time < 0f)
+            {
+                Controller.SetToca(false);
+                animator.SetBool("Toca", false);
+
+                
 
                 rendererTrumpa.sprite = Trumpeta;
                 TrumpAgarr = false;
@@ -209,14 +213,6 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("Pena", true);
                 animation = true;
 
-            }
-
-
-            else if (time < 0f)
-            {
-                Controller.SetPena(false);
-                animator.SetBool("Pena", false);
-
                 if (BController.GetValores().Contains(2))
                 {
                     pointsSlider.AddPoints(pontoAdd);
@@ -225,6 +221,16 @@ public class PlayerController : MonoBehaviour
                 {
                     pointsSlider.AddPoints(pontoRem);
                 }
+
+            }
+
+
+            else if (time < 0f)
+            {
+                Controller.SetPena(false);
+                animator.SetBool("Pena", false);
+
+                
 
                 rendererPena.sprite = Pena;
                 PenaApanha = false;
@@ -256,14 +262,6 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("Harpa", true);
                 animation = true;
 
-            }
-
-
-            else if (time < 0f)
-            {
-                Controller.SetHarp(false);
-                animator.SetBool("Harpa", false);
-
                 if (BController.GetValores().Contains(3))
                 {
                     pointsSlider.AddPoints(pontoAdd);
@@ -272,6 +270,16 @@ public class PlayerController : MonoBehaviour
                 {
                     pointsSlider.AddPoints(pontoRem);
                 }
+
+            }
+
+
+            else if (time < 0f)
+            {
+                Controller.SetHarp(false);
+                animator.SetBool("Harpa", false);
+
+                
 
                 rendererHarp.sprite = Harp;
                 HarpApanha = false;
@@ -302,14 +310,6 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("HulaH", true);
                 animation = true;
 
-            }
-
-
-            else if (time < 0f)
-            {
-                Controller.SetHula(false);
-                animator.SetBool("HulaH", false);
-
                 if (BController.GetValores().Contains(4))
                 {
                     pointsSlider.AddPoints(pontoAdd);
@@ -318,6 +318,16 @@ public class PlayerController : MonoBehaviour
                 {
                     pointsSlider.AddPoints(pontoRem);
                 }
+
+            }
+
+
+            else if (time < 0f)
+            {
+                Controller.SetHula(false);
+                animator.SetBool("HulaH", false);
+
+                
 
                 rendererHula.sprite = Hula;
                 HulaApanha = false;
@@ -348,14 +358,6 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("Maska", true);
                 animation = true;
 
-            }
-
-
-            else if (time < 0f)
-            {
-                Controller.SetMask(false);
-                animator.SetBool("Maska", false);
-
                 if (BController.GetValores().Contains(5))
                 {
                     pointsSlider.AddPoints(pontoAdd);
@@ -364,6 +366,16 @@ public class PlayerController : MonoBehaviour
                 {
                     pointsSlider.AddPoints(pontoRem);
                 }
+
+            }
+
+
+            else if (time < 0f)
+            {
+                Controller.SetMask(false);
+                animator.SetBool("Maska", false);
+
+                
 
                 rendererMask.sprite = Mask;
                 MaskApanha = false;
@@ -388,13 +400,21 @@ public class PlayerController : MonoBehaviour
 
             if (time > 0f)
             {
-                print("TAPORRA");
                 time -= Time.deltaTime;
                 Controller.SetBulha(true);
                 rendererPlayer2.enabled = false;
                 Controller.PlayBulhaAnim();
                 animation = true;
-                
+
+                if (BController.GetValores().Contains(6))
+                {
+                    pointsSlider.AddPoints(pontoAdd * 2f);
+                }
+                else
+                {
+                    pointsSlider.AddPoints(pontoRem);
+                }
+
 
             }
 
@@ -405,14 +425,7 @@ public class PlayerController : MonoBehaviour
                 Controller.StopBulhaAnim();
                 
 
-                if (BController.GetValores().Contains(6))
-                {
-                    pointsSlider.AddPoints(pontoAdd * 2f);
-                }
-                else
-                {
-                    pointsSlider.AddPoints(pontoRem);
-                }
+                
 
                 
                 BulhaApanha = false;
@@ -443,14 +456,6 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("Macaca", true);
                 animation = true;
 
-            }
-
-
-            else if (time < 0f)
-            {
-                Controller.SetMacac(false);
-                animator.SetBool("Macaca", false);
-
                 if (BController.GetValores().Contains(7))
                 {
                     pointsSlider.AddPoints(pontoAdd);
@@ -459,6 +464,16 @@ public class PlayerController : MonoBehaviour
                 {
                     pointsSlider.AddPoints(pontoRem);
                 }
+
+            }
+
+
+            else if (time < 0f)
+            {
+                Controller.SetMacac(false);
+                animator.SetBool("Macaca", false);
+
+                
 
                 rendererMacac.sprite = Macac;
                 MacacApanha = false;

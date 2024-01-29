@@ -34,7 +34,7 @@ public class PointSliderController : MonoBehaviour
     void Update()
     {
         // Update points based on time
-        currentPoints -= pointsChangeRate * Time.deltaTime;
+        currentPoints -= pointsChangeRate;
 
         // Clamp points between min and max values
         currentPoints = Mathf.Clamp(currentPoints, minPoints, maxPoints);

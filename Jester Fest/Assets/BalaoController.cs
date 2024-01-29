@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BalaoController : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class BalaoController : MonoBehaviour
     public List<int> valoresR;
     public List<SpriteRenderer> renderers;   // List of sprite renderers
     public float timer, time;
+
+    [SerializeField] Slider volumeSlider;
 
     void Start()
     {
@@ -28,6 +31,9 @@ public class BalaoController : MonoBehaviour
 
     void Update()
     {
+
+        volumeSlider.value = (timer/time);
+
         timer -= Time.deltaTime;
         if(timer < 0) 
         { 
