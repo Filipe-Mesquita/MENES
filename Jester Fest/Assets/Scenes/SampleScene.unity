@@ -1066,7 +1066,7 @@ MonoBehaviour:
   pointsSlider: {fileID: 1967160267}
   maxPoints: 100
   minPoints: 0
-  pointsChangeRate: 1.5
+  pointsChangeRate: 0.003
   happyMusic: {fileID: 8300000, guid: df8286d374070b94e952272e9a14886b, type: 3}
   sadMusic: {fileID: 8300000, guid: 817a8a97fac2dae4497743d6bb324161, type: 3}
   normalMusic: {fileID: 8300000, guid: d621bb19e15fa624e879aedf50cbe727, type: 3}
