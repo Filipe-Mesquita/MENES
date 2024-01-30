@@ -276,7 +276,7 @@ RectTransform:
   m_Father: {fileID: 387037435}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 17.0758, y: 0}
   m_SizeDelta: {x: 55, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -800,7 +800,7 @@ Transform:
   m_GameObject: {fileID: 290467657}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.5, y: -5.49, z: 0}
+  m_LocalPosition: {x: -3.42, y: -5.51, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1066,7 +1066,7 @@ MonoBehaviour:
   pointsSlider: {fileID: 1967160267}
   maxPoints: 100
   minPoints: 0
-  pointsChangeRate: 0.003
+  pointsChangeRate: 0.007
   happyMusic: {fileID: 8300000, guid: df8286d374070b94e952272e9a14886b, type: 3}
   sadMusic: {fileID: 8300000, guid: 817a8a97fac2dae4497743d6bb324161, type: 3}
   normalMusic: {fileID: 8300000, guid: d621bb19e15fa624e879aedf50cbe727, type: 3}
@@ -1362,7 +1362,7 @@ Transform:
   m_GameObject: {fileID: 469078076}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.41, y: -4.06, z: 2.0192637}
+  m_LocalPosition: {x: 4.74, y: -5.17, z: 2.0192637}
   m_LocalScale: {x: 2.32, y: 2.32, z: 2.32}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1482,7 +1482,7 @@ Transform:
   m_GameObject: {fileID: 484738126}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.17611173, w: 0.9843702}
-  m_LocalPosition: {x: 8.28, y: -2.74, z: 2.0192637}
+  m_LocalPosition: {x: 7.74, y: -2.94, z: 2.0192637}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1602,7 +1602,7 @@ Transform:
   m_GameObject: {fileID: 502709628}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.88, y: 2.21, z: 2.0192637}
+  m_LocalPosition: {x: -3.88, y: 2, z: 2.0192637}
   m_LocalScale: {x: 3.3, y: 3.3, z: 3.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2019,7 +2019,7 @@ Transform:
   m_GameObject: {fileID: 626128588}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.41, y: 2.21, z: 2.0192637}
+  m_LocalPosition: {x: 8.41, y: 2, z: 2.0192637}
   m_LocalScale: {x: 3.3, y: 3.3, z: 3.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2182,7 +2182,7 @@ Transform:
   m_GameObject: {fileID: 685457983}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.42, y: 2.21, z: 2.0192637}
+  m_LocalPosition: {x: -8.42, y: 2, z: 2.0192637}
   m_LocalScale: {x: 3.3, y: 3.3, z: 3.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2680,8 +2680,8 @@ MonoBehaviour:
   leftKey: 276
   rightKey: 275
   interactKey: 305
-  pontoAdd: 0.08
-  pontoRem: -0.04
+  pontoAdd: 8
+  pontoRem: -4
   pointsSlider: {fileID: 364178042}
   Bolas: {fileID: 21300000, guid: 4c11534cc57ecfe4d8fe5ca868dc84d5, type: 3}
   Trumpeta: {fileID: 21300000, guid: 74ae1cbe6623744488f24b99a0f1de84, type: 3}
@@ -6335,7 +6335,7 @@ RectTransform:
   m_Father: {fileID: 1901685257}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6932,7 +6932,7 @@ Transform:
   m_GameObject: {fileID: 1239807358}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.95, y: 2.21, z: 2.0192637}
+  m_LocalPosition: {x: 3.95, y: 2, z: 2.0192637}
   m_LocalScale: {x: 3.3, y: 3.3, z: 3.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -7138,7 +7138,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.09518349, y: -2.66, z: 2.0192637}
-  m_LocalScale: {x: 0.11, y: 0.11, z: 0.11}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1412492805}
@@ -7177,7 +7177,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.00000047683716}
   serializedVersion: 2
-  m_Radius: 4.9
+  m_Radius: 0.35
 --- !u!212 &1254607468
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8421,7 +8421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!223 &1630724840
 Canvas:
   m_ObjectHideFlags: 0
@@ -10359,7 +10359,7 @@ MonoBehaviour:
   - {fileID: 1440311902}
   - {fileID: 341852924}
   - {fileID: 1033816489}
-  timer: 7
+  timer: 6
   time: 5
   volumeSlider: {fileID: 1787962029}
 --- !u!4 &1999278361
