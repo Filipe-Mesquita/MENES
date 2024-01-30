@@ -699,8 +699,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 19.5
+  m_fontSizeBase: 19.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2365,8 +2365,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00001812, y: -3.2313}
-  m_SizeDelta: {x: 357.6379, y: 280.4626}
+  m_AnchoredPosition: {x: -0.00001812, y: -20.0885}
+  m_SizeDelta: {x: 357.6379, y: 314.1769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &690605674
 MonoBehaviour:
@@ -2390,12 +2390,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: '==========================
 
+    The king will give you a list of task
+    he wants you to do every some seconds.
 
+    Each task is represented by a diferent
+    ICON. These can be found in the king''s thought cloud.
 
-    Pay attention to the tasks the king
-    gives.
-
-    Complete them using the interaction button to fill the laugh meter.'
+    Pay attention to
+    the ICONs and complete the assigned task using the interaction key.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 935b9f2611abfee428952ccb7c20e6b9, type: 2}
   m_sharedMaterial: {fileID: 3295050613058203696, guid: 935b9f2611abfee428952ccb7c20e6b9, type: 2}
@@ -2422,8 +2424,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 19.5
+  m_fontSizeBase: 19.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3276,8 +3278,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 19.5
+  m_fontSizeBase: 19.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
